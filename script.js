@@ -24,7 +24,7 @@ function addtask(){
     
 }
 document.addEventListener('keydown',(ea)=>{
-    if(ea.shiftKey && ea.ctrlKey){
+    if(ea.shiftKey && ea.f){
         addtask();
     }
 });
