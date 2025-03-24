@@ -1,72 +1,84 @@
-*{
-    font-family: 'poppins',sans-serif;
-    margin: 0%;
-    padding: 0%;
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-.container{
-    
+  }
+  
+  .container {
     width: 100%;
     min-height: 100vh;
-    /* background:linear-gradient(135deg, rgb(36, 38, 137),rgb(132, 70, 135)); */
-    /* background-color: rgba(255, 255, 255, 0.305); */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.todo{
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-    10px 10px 15px rgba(70,70,70,0.12);
+    /* background: linear-gradient(135deg, rgb(36, 38, 137), rgb(132, 70, 135)); */
+  }
+  
+  .todo {
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
     position: relative;
-    min-width: 50vh;
+    min-width: 90vw;
+    max-width: 400px; /* Responsive max width */
     min-height: 200px;
     background-color: aliceblue;
-    width: 200px;
-    height: auto;
     padding: 25px;
     border-radius: 10px;
-    
-}
-.input{
-    box-shadow: -10px -10px 15px rgba(143, 136, 136, 0.207),
-    10px 10px 15px rgba(70,70,70,0.12);
-    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    box-shadow: -10px -10px 15px rgba(143, 136, 136, 0.207), 10px 10px 15px rgba(70, 70, 70, 0.12);
+    margin-top: 10px;
     margin-bottom: 25px;
     padding-left: 20px;
     border-radius: 30px;
     display: flex;
     align-items: center;
-
-}
-input {
+    width: 100%;
+  }
+  
+  input {
     padding-top: 2px;
     font-size: 15px;
     border: none;
     background: none;
     outline: none;
+    width: 100%; /* Makes the input take full width */
   }
-
-button{
+  
+  button {
+    position: relative;
     background-color: rgb(245, 121, 12);
     border: none;
-    float: right;
     height: 100%;
-    border-radius: 30px;
     padding: 16px 35px;
     cursor: pointer;
     color: aliceblue;
-}
-button:hover{
+    border-radius: 30px;
+    font-size: 16px;
+  }
+  
+  button:hover {
     background-color: rgb(211, 78, 78);
-}
-ul li{
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
+  }
+  
+  ul li {
     cursor: pointer;
     padding: 12px 8px 12px 50px;
     user-select: none;
-    position: relative;   
-}
-ul li:before{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  ul li:before {
     content: ' ';
     height: 20px;
     width: 20px;
@@ -77,15 +89,18 @@ ul li:before{
     top: 12px;
     background-size: cover;
     background-image: url(unchecked.png);
-}
-ul li.checked{
+  }
+  
+  ul li.checked {
     color: gray;
     text-decoration: line-through;
-}
-ul li.checked::before{
+  }
+  
+  ul li.checked::before {
     background-image: url(checked.png);
-}
-ul li span{
+  }
+  
+  ul li span {
     position: absolute;
     height: 40px;
     width: 40px;
@@ -94,8 +109,46 @@ ul li span{
     font-size: 20px;
     text-align: center;
     line-height: 40px;
-}
-ul li span:hover{
+  }
+  
+  ul li span:hover {
     border-radius: 50%;
     background-color: rgba(206, 202, 202, 0.733);
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .todo {
+      min-width: 80vw;
+      padding: 20px;
+    }
+    
+    button {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+    
+    ul li {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .todo {
+      min-width: 90vw;
+      padding: 15px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+    
+    input {
+      font-size: 14px;
+    }
+    
+    ul li {
+      font-size: 12px;
+    }
+  }
+  
