@@ -17,14 +17,15 @@
   .todo {
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
     position: relative;
-    min-width: 90vw;
-    max-width: 400px; /* Responsive max width */
+    min-width: 30vw;
+    max-width: 400px; 
     min-height: 200px;
     background-color: aliceblue;
     padding: 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+
   }
   
   .input {
@@ -44,7 +45,7 @@
     border: none;
     background: none;
     outline: none;
-    width: 100%; /* Makes the input take full width */
+    width: 100%; 
   }
   
   button {
